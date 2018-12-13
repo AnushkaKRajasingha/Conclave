@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Roles and Permissions - CIMembership Official Documentation</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../css/extra.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Roles and Permissions";
+    var mkdocs_page_input_path = "roles_permissions.md";
+    var mkdocs_page_url = "/roles_permissions/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> CIMembership Official Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            
+          
+            
+              <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../overview/">Overview</a>
+        
+    </li>
+<li>
+            
+          
+            
+              <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../config/">Configuration Files</a>
+        
+    </li>
+<li>
+            
+          
+            
+              <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../installation/">Installation</a>
+        
+    </li>
+<li>
+            
+          
+            
+              <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../core_modules/">Core Modules</a>
+        
+    </li>
+<li>
+            
+          
+            
+              <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../social_login/">Configuring Social Login</a>
+        
+    </li>
+<li>
+            
+          
+            
+              <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Roles and Permissions</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#what-are-roles">What are roles?</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#what-are-permissions">What are permissions?</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#how-do-we-use-them">How do we use them?</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#checking-permissions">Checking permissions</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#checking-roles">Checking roles</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#menu">Menu</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#future-ideas">Future ideas</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+            
+          
+            
+              <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../coding_tips/">Coding tips</a>
+        
+    </li>
+<li>
+            
+          
+            
+              <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../theming_layouts/">Theming and layouts</a>
+        
+    </li>
+<li>
+            
+          
+        </ul>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">CIMembership Official Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Roles and Permissions</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1>Role and Permissions</h1>
+
+<h2 id="what-are-roles">What are roles?</h2>
+<p>Roles are member access profiles which are used to hook permissions on to. So a role is a collection of permissions. Roles are applied to members - permissions are not.</p>
+<h2 id="what-are-permissions">What are permissions?</h2>
+<p>Permissions are individual control types for sections of the website. For example we can allow or disallow access to the List members page or the settings page. Once a permission is hooked to a role this permission becomes available for all members who have received that role.</p>
+<p>Permissions have an order: this is only used on the roles controller page to show the permissions in the order that you want.</p>
+<h2 id="how-do-we-use-them">How do we use them?</h2>
+<p>There are 2 static methods defined in core/Site_Controller.php:</p>
+<ul>
+<li>check_roles</li>
+<li>check_permissions</li>
+</ul>
+<h2 id="checking-permissions">Checking permissions</h2>
+<p>Explaining this works best by example: <code>adminpanel/list_members</code> LINE 26:</p>
+<pre><code>if (! self::check_permissions(1)) {
+    redirect("/private/no_access");
+}</code></pre>
+
+<p>We feed the permission ID to the check_permissions method; we could also pass an array through:</p>
+<pre><code>if (! self::check_permissions(3, 6, 9)) {
+    redirect("/private/no_access");
+}</code></pre>
+
+<p>The permission ID can be found on adminpanel/permissions. Note that you can't delete system permissions because they are
+required for the inner workings of this script. You can add custom permissions for example when you create extra pages where
+special ACL rules are needed. Then you create a new permission specific to your page, maybe even connected to a new role
+for this section you just added.</p>
+<p>Each method inside our adminpanel controller files is protected by this kind of permissions check, each with its own 
+specific permission code. We also use them in the constructor to protect a whole class in one go when each method needs the
+same permissions anyway.</p>
+<h2 id="checking-roles">Checking roles</h2>
+<p>The Check_roles method is more powerful because we can limit access based on a whole access profile:
+consider core/Admin_Controller.php LINE 10 as an example: </p>
+<pre><code>if ( ! self::check_roles(array(1,2,3))) { // catch-all for extra protection on role level
+   redirect("/private/no_access");
+}</code></pre>
+
+<p>We block every role that does not have administrator privileges. We can easily create more complex setups with this
+principle: separate realms for specific teams or customer groups.</p>
+<h2 id="menu">Menu</h2>
+<p>The Sidemenu also uses roles to show more or less options. For regular members there is no Adminpanel section 
+available for example.</p>
+<h2 id="future-ideas">Future ideas</h2>
+<p>Adding groups to roles based on module setup, making it easier to configure complex access control lists for sites
+with many extra modules.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../coding_tips/" class="btn btn-neutral float-right" title="Coding tips">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../social_login/" class="btn btn-neutral" title="Configuring Social Login"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>CIMembership is licenced through codecanyon.net and Envato: all their copyrights apply &copy; 2017.</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../social_login/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../coding_tips/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

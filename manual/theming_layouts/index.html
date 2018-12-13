@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Theming and layouts - CIMembership Official Documentation</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../css/extra.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Theming and layouts";
+    var mkdocs_page_input_path = "theming_layouts.md";
+    var mkdocs_page_url = "/theming_layouts/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> CIMembership Official Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            
+          
+            
+              <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../overview/">Overview</a>
+        
+    </li>
+<li>
+            
+          
+            
+              <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../config/">Configuration Files</a>
+        
+    </li>
+<li>
+            
+          
+            
+              <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../installation/">Installation</a>
+        
+    </li>
+<li>
+            
+          
+            
+              <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../core_modules/">Core Modules</a>
+        
+    </li>
+<li>
+            
+          
+            
+              <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../social_login/">Configuring Social Login</a>
+        
+    </li>
+<li>
+            
+          
+            
+              <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../roles_permissions/">Roles and Permissions</a>
+        
+    </li>
+<li>
+            
+          
+            
+              <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../coding_tips/">Coding tips</a>
+        
+    </li>
+<li>
+            
+          
+            
+              <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Theming and layouts</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#the-default-controller">The default controller</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#custom-404-page">Custom 404 page</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#keeping-it-dry">Keeping it DRY</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#bootstrap-less-and-compiling">Bootstrap, LESS and Compiling</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#managing-layouts">Managing Layouts</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#loading-custom-data-with-set_css-and-set_js">Loading Custom Data With set_css() and set_js()</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#setting-metadata">Setting metadata</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#creating-a-custom-theme">Creating A Custom Theme</a></li>
+                
+                    <li><a class="toctree-l4" href="#a-front-end">A. Front-end</a></li>
+                
+                    <li><a class="toctree-l4" href="#a-back-end">A. Back-end</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+            
+          
+        </ul>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">CIMembership Official Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Theming and layouts</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1>Theming and Layouts</h1>
+
+<h2 id="the-default-controller">The default controller</h2>
+<p><strong>Home</strong></p>
+<p>This controller is set in <code>application/config/routes.php</code><br>
+Check out line 52 where<code>$route['default_controller'] = 'home';</code> determines this.<br>
+Default controllers pick up when you call a module without calling a controller like example.com/adminpanel.</p>
+<h2 id="custom-404-page">Custom 404 page</h2>
+<p>We can also find this setting in routes.php LINE 53: <code>$route['404_override'] = 'utils/page_not_found';</code></p>
+<h2 id="keeping-it-dry">Keeping it DRY</h2>
+<p>Application/core overview:</p>
+<ul>
+<li>MY_Controller: the first parent, everything is derived from this core controller. Contains theming methods.</li>
+<li>Site_Controller: extends MY_Controller and adds roles and permission methods that can be used anywhere in the application.</li>
+<li>Private_Controller: extends Site_Controller and adds login verification so that only logged in users can view these pages;</li>
+<li>Auth_Controller: extends Site_Controller and is only used for public controllers where we need to redirect 
+  members who are logged in to avoid them having access to authentication forms.</li>
+<li>Admin_Controller: extends the Private_Controller and loads the admin-specific language file;</li>
+<li>Ajax_Controller: used when the whole controller is AJAX-only - in the constructor we check for AJAX with <code>$this-&gt;input-&gt;is_ajax_request()</code>.</li>
+</ul>
+<p><img alt="Screenshot" src="../img/core.png" /></p>
+<p>We extend our controllers from any of these core controllers depending on what we need. This is the first question to 
+ask ourselves when writing new code: do we want this page to be public or private? Additionally, do we need new roles and permissions, 
+is this an adminpanel page? We can even add more core controllers, <strong>you can add a new core controller for your module</strong> for example and
+extend all your module controllers from this new custom core controller. You can then add shared code and methods to your core controller to avoid duplicate code. Will be handy for larger projects.</p>
+<h2 id="bootstrap-less-and-compiling">Bootstrap, LESS and Compiling</h2>
+<p>How is Bootstrap hooked into this? We have a less folder that is not part of the ci_membership package. 
+Bootstrap's default code can be found here <code>less/adminpanel/vendor/bootstrap3.3.x</code> and the overrides for this
+theme are in <code>less/adminpanel/bootstrap</code>. We then use the bootstrap.less file found here to keep track
+of our imports. Notice at the bottom of this file we import our own code. This is the file you need to compile. </p>
+<p>I use Winless, here is a visual example:</p>
+<p><img alt="Screenshot" src="../img/winless.png" /></p>
+<p>Winless auto-compiles, meaning as soon as you tab away from your project view and your project is selected inside winless, it will compile.
+It might not always do this, but it does work most of the time.</p>
+<p>When you add your own less files you can (but don't have to) refresh the Winless folder and untick the newly added files.</p>
+<p>We could also use Grunt or Gulp and make a listener for our changes via command line which I would highly advise
+you to do as it saves so much time. We won't go into detail here - for all those node users, check out https://github.com/gruntjs/grunt-contrib-less
+which I'm sure you already know.</p>
+<p>An excellent example of how to do this specifically for Bootstrap is to <a href="https://jonathanmh.com/make-grunt-watch-for-lesscss-changes/">check out this simple grunt tutorial</a>.
+Once Bootstrap 4 is out we're going to have to switch to this type of setup anyway because it's much more practical to use in stead of having to
+install something like Winless.</p>
+<p>Some IDEs like PHPStorm allow you to incorporate a transpiler into your software:<br>
+<a href="https://www.jetbrains.com/help/phpstorm/2016.3/transpiling-sass-less-and-scss-to-css.html#d405088e199">https://www.jetbrains.com/help/phpstorm/2016.3/transpiling-sass-less-and-scss-to-css.html#d405088e199</a></p>
+<p>For all you guys new to command line: the basics of getting started with composer, grunt
+and node are easy - it just takes some dedicated time without any distraction to get that lightbulb moment.
+Once you get up and running you won't look back.</p>
+<h2 id="managing-layouts">Managing Layouts</h2>
+<p><strong>Themes:</strong> <code>application/views/themes/</code><br>
+These are the HTML5 pages that act as containers for our dynamic parts of the application. Partials will be loaded into these files.
+This is the core of the theme, this file is loaded first in our template method quick_page_setup(). See below.<br></p>
+<p><strong>What layout to choose?</strong></p>
+<ul>
+<li>adminpanel is for the backend<br></li>
+<li>bootstrap3 is for public pages</li>
+</ul>
+<p>Choose wisely: the headers and footers of each theme differ and serve a specific purpose. Check out the existing code
+and use them as examples.</p>
+<p>So for example the auth module uses bootstrap3 as $theme because it is part of the front-end. The profile uses the adminpanel 
+because it is part of the backend. 
+For views this isn't as important - you can easily override the default view theme with another one to grab view
+files from another theme. This allows us to quickly override certain parts of the website.</p>
+<p><strong>Generic files:</strong> some of the views are still stored in application/views/themes/ because these are used at more then one
+location and do not belong to a single module.</p>
+<p><strong>Modules:</strong> the module-specific views are found in <code>application/modules/[module_name]/views</code>.</p>
+<h6>quick_page_setup()</h6>
+
+<p>Our Template library takes care of loading views dynamically allowing for way more flexibility
+then the standard CodeIgniter behaviour. You can load views from other themes, you can create a custom folder in views 
+and load those views in any controller for your module. Use the <code>$overriding_theme</code> explained below
+to grab from another theme.</p>
+<p>Below is the method responsible for setting up pages quickly in a controller. This method lives in 
+<code>application/core/MY_Controller.php</code> making it accessible to all controllers.</p>
+<pre><code>public function quick_page_setup($theme, $layout, $page_title, $path, $header, $footer, $overriding_theme = "", $data = array()) {
+
+   if (empty($overriding_theme)) {
+       $overriding_theme = $theme;
+   }
+
+   $this->template->set_theme($theme);
+   $this->template->set_layout($layout);
+   $this->template->title($page_title);
+   $this->_process_partial('header', $theme, 'partials/'. $header);
+   $this->_process_partial('footer', $theme, 'partials/'. $footer);
+
+   if (!empty($data)) {
+       $this->_process_template_build($overriding_theme, $path, $data);
+   }else{
+       $this->_process_template_build($overriding_theme, $path);
+   }
+
+}</code></pre>
+
+<ul>
+<li><strong>$theme:</strong> set the active theme, usually this will be Settings_model::$db_config['active_theme'] for non-adminpanel pages and Settings_model::$db_config['adminpanel_theme'] for adminpanel pages. These can be found in Site settings in the admin panel.
+The default theme for Settings_model::$db_config['active_theme'] = bootstrap3;
+The default theme for Settings_model::$db_config['adminpanel_theme'] = adminpanel.
+These must reflect a folder inside application/views/themes; you can add your own theme by creating a new folder here. </li>
+<li><strong>$layout:</strong> choose your layout, for example 'main' or 'adminpanel' - this must reside in views/themes/[themename]/layouts/</li>
+<li><strong>$page_title:</strong> will appear in browser window as page name</li>
+<li><strong>$path:</strong> path to the actual view file inside this module folder</li>
+<li><strong>$header, $footer:</strong> names of the partials used for these purposes</li>
+<li><strong>$viewTheme:</strong> in case you need a custom theme; it's an alternate folder location for views if you need some from other themes - omit or leave on '' if not needed</li>
+<li><strong>$data:</strong> array of data passed to view (optional, omit if not needed)</li>
+</ul>
+<p>I am using <code>modules/membership/controllers/Home.php</code> as an example. In our controller we call this method with:</p>
+<pre><code>public function index() {
+   $this->quick_page_setup(Settings_model::$db_config['adminpanel_theme'],
+       'adminpanel', // theme
+       $this->lang->line('home_title'), // page title
+       'home',  // view name
+       'header', // partial
+       'footer', // partial
+       Settings_model::$db_config['active_theme'] // overriding theme for partials only (optional)
+   );
+}</code></pre>
+
+<p>Passing data will be done by passing an array to the method at the end:</p>
+<pre><code>public function index() {
+   $this->quick_page_setup(Settings_model::$db_config['adminpanel_theme'],
+       'adminpanel', // theme
+       $this->lang->line('home_title'), // page title
+       'home',  // view name
+       'header', // partial
+       'footer', // partial
+       Settings_model::$db_config['active_theme'], // overriding theme
+       $content_data // array of data to pass to the view
+   );
+}</code></pre>
+
+<h2 id="loading-custom-data-with-set_css-and-set_js">Loading Custom Data With set_css() and set_js()</h2>
+<p>In our index() method belinging to our controller we can also quickload CSS and JS files with our template engine:</p>
+<ul>
+<li>use set_css() for CSS</li>
+<li>set_js() for JavaScript files</li>
+</ul>
+<p>These are loaded in the header and footer for each theme (adminpanel and bootstrap3). Here is an example from our
+password generator files:</p>
+<pre><code>$this->template->set_js('widget', base_url() .'assets/vendor/jquery/jquery.ui.widget.js');
+$this->template->set_js('upload', base_url() .'assets/vendor/fileupload/jquery.fileupload.js');
+
+$this->template->set_js('big-min', base_url() .'assets/vendor/diceware/components/big.min.js');
+$this->template->set_js('special-min', base_url() .'assets/vendor/diceware/lists/special-min.js');
+$this->template->set_js('diceware-min', base_url() .'assets/vendor/diceware/lists/diceware-min.js');
+$this->template->set_js('eff', base_url() .'assets/vendor/diceware/lists/eff.js');
+$this->template->set_js('password-gen', base_url() .'assets/vendor/diceware/password_generator.js');</code></pre>
+
+<p>As you can see we need to feed these methods a unique name for each line because we're adding it to an array behind the scenes.</p>
+<h2 id="setting-metadata">Setting metadata</h2>
+<p>You can easily generate metadata in de index() of a controller with this Template method:</p>
+<p><code>public function set_metadata($name, $content, $type = 'meta') {}</code></p>
+<p>Where the third argument can also be "link".</p>
+<p>We use it like this:</p>
+<p><code>$this-&gt;template-&gt;set_metadata('description', $this-&gt;lang-&gt;line('add_member'));</code> in an index() so where
+you also load a template.</p>
+<p>In the theme file (application/views/themes/[themname]/layouts) meta data is called with:</p>
+<p><code>&lt;?php print $template['metadata']; ?&gt;</code></p>
+<h2 id="creating-a-custom-theme">Creating A Custom Theme</h2>
+<p>It takes some time to get used to but once you get the hang of it you will see that this system offers great flexibility.
+You can for example use custom layouts for each page with the quick_page_setup() method.</p>
+<h3 id="a-front-end">A. Front-end</h3>
+<p>First we choose a new active theme name for our custom design: let's use the name newtheme for this example.
+<br>
+Now we <strong>copy the vital view folders</strong> so that we can use the copied views to modify the markup:
+<br>
+- for the home page I copy <code>modules/home/views/themes/bootstrap3</code> to <code>modules/home/views/themes/newtheme</code>
+<br>
+- for auth I copy <code>modules/auth/views/themes/bootstrap3</code> to <code>modules/auth/views/themes/newtheme</code>
+<br>
+- for utils I copy <code>modules/utils/views/themes/bootstrap3</code> to <code>modules/utils/views/themes/newtheme</code>
+<br>
+- For theme files: copy <code>views/themes/bootstrap3</code> to <code>views/themes/newtheme</code></p>
+<p>We need a new css file in assets/css/newtheme/bootstrap.min.css (use the one from your design here or compile with LESS).</p>
+<p>Optional: create a folder assets/img/newtheme and store your theme images here.</p>
+<p>This allows us to change our active theme in <code>/adminpanel/dashboard</code>:
+look for "Currently active theme" and change it to newtheme - save your settings.</p>
+<p>Now you are working on your own theme, no more need to mess with default files.</p>
+<h3 id="a-back-end">A. Back-end</h3>
+<p>Same deal: choose a new name for your adminpanel theme and copy the view folders to this new name:
+<br>
+- We copy over the theme views folder <code>modules/adminpanel/views/themes/adminpanel</code> 
+<br>
+- Make a copy of <code>modules/membership/views/themes/adminpanel</code> 
+<br>
+- For theme files: copy <code>views/themes/adminpanel</code> to your new folder namein the same destination.</p>
+<p>Create a new theme folder with a css file in assets/css just like the ones already there (copy).</p>
+<p>Now we change the adminpanel theme in site settings and work on the new theme can start.</p>
+<p>Off course the adminpanel design is more complex and depends on more tools like a menu, a file upload script and many more. </p>
+<p>In the less folder we have an adminpanel folder - you can copy it and use it in your compilation.</p>
+<p><strong>Quick Tips:</strong>
+<br>
+- If you want to change a controller that might get overwritten you can opt to copy it and set a route to your copied controller to avoid changing default files.
+For example you can create a controller modules/home/controllers/Start.php and add a route from home to start, effectively overriding the home page.
+<br>
+- More interesting when having to edit CIMembership files is to copy the whole module and work from there. You will effectively make your own
+fork of the code and will have to either drop future changes to CIM or add them manually later. If your clients require you
+to heavily modify the code than this is your best bet. When you only need light features consider requesting them to be added to the default code.
+<br>
+- assets: cs, js and such can be stored in several ways: we opted for a vendor folder for JS while CSS will be handled by a LESS compiler.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../coding_tips/" class="btn btn-neutral" title="Coding tips"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>CIMembership is licenced through codecanyon.net and Envato: all their copyrights apply &copy; 2017.</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../coding_tips/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+
+</body>
+</html>

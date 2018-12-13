@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Configuring Social Login - CIMembership Official Documentation</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../css/extra.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Configuring Social Login";
+    var mkdocs_page_input_path = "social_login.md";
+    var mkdocs_page_url = "/social_login/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> CIMembership Official Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            
+          
+            
+              <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../overview/">Overview</a>
+        
+    </li>
+<li>
+            
+          
+            
+              <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../config/">Configuration Files</a>
+        
+    </li>
+<li>
+            
+          
+            
+              <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../installation/">Installation</a>
+        
+    </li>
+<li>
+            
+          
+            
+              <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../core_modules/">Core Modules</a>
+        
+    </li>
+<li>
+            
+          
+            
+              <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Configuring Social Login</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#setting-the-providers">Setting the providers</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#step-by-step-guides">Step-by-step guides</a></li>
+                
+                    <li><a class="toctree-l4" href="#facebook">Facebook</a></li>
+                
+                    <li><a class="toctree-l4" href="#google">Google</a></li>
+                
+                    <li><a class="toctree-l4" href="#twitter">Twitter</a></li>
+                
+                    <li><a class="toctree-l4" href="#github">Github</a></li>
+                
+                    <li><a class="toctree-l4" href="#linkedin">LinkedIn</a></li>
+                
+                    <li><a class="toctree-l4" href="#microsoft">Microsoft</a></li>
+                
+                    <li><a class="toctree-l4" href="#paypal">Paypal</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#stripe">Stripe</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#development-vs-production">Development vs Production</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#other">Other</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+            
+          
+            
+              <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../roles_permissions/">Roles and Permissions</a>
+        
+    </li>
+<li>
+            
+          
+            
+              <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../coding_tips/">Coding tips</a>
+        
+    </li>
+<li>
+            
+          
+            
+              <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../theming_layouts/">Theming and layouts</a>
+        
+    </li>
+<li>
+            
+          
+        </ul>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">CIMembership Official Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Configuring Social Login</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1>Configuring Social Login</h1>
+
+<ul>
+<li>adding providers in admin panel</li>
+<li>explanation for each active social network :FB, G+, Twitter, Linkedin, etc</li>
+<li>with screenshots etc off course</li>
+</ul>
+<h2 id="setting-the-providers">Setting the providers</h2>
+<p>The data from our providers will be saved in the database and can be configured via the adminpanel.
+These providers - the leading social networks - offer an OAuth platform to developers and we use the plugin from
+ThePHPLeague, maintained on Github, to offer a safe platform to communicate through.</p>
+<p>Providers can be added, remove, enabled and disabled through the adminpanel. You can also disable the social login
+via the site settings page.</p>
+<p>Almost al providers allow you to upload an application icon. This will not be explained separately for each provider 
+as that would be redundant.</p>
+<p>Creating a new social provider is easy: Click on OAuth providers in adminpanel and then Add to see this form:</p>
+<p><img alt="Screenshot" src="../img/OAuth-adminpanel-create.png" /></p>
+<p>So you see it is very easy to add anything in there. Currently the system relies on a provider with First letter Capitalized.
+Your input will be automatically converted to this format so you don't have to worry about this.</p>
+<div class="warning">
+    <i class="fa fa-long-arrow-right pd-r-5"></i> The value of the oauth name field matters: it needs to correspond to the name of the library class in 
+    <code>application/libraries/Oauth(1 or 2)/</code>. Just use the file name, it's identical.
+</div>
+
+<div class="warning">
+    <i class="fa fa-long-arrow-right pd-r-5"></i> When you switch to https you need to change this in all the developer consoles. Https is going to get more
+    and more preference so it's important to start using one now. We have free SSL in our hosting packages.
+</div>
+
+<div class="warning">
+    <i class="fa fa-long-arrow-right pd-r-5"></i> All providers have <strong>rate limits</strong> which can be found in
+    their respective API consoles. Some providers offer solutions to these limits, each in their own way.
+</div>
+
+<h2 id="step-by-step-guides">Step-by-step guides</h2>
+<p>Each provider has a different developer platform where OAuth needs to be configured. Some are easier than others
+but all are subject to constant change. The manual might contain outdated images from time to time in between updates.</p>
+<div class="important">
+    Wherever you encounter a usage of /dev/cim3/ in an example: this is my development folder. You don't need to use
+    it it just serves as an example because I'm using screen captures from there.
+</div>
+
+<h3 id="facebook">Facebook</h3>
+<ul>
+    <li><a href="https://developers.facebook.com/apps/">Go to the Facebook developer website and log in.</a></li>
+    <li>At the right top go to My apps and click <strong>Add A New App</strong> or click the green button that
+    tells you the same.</li>
+    <li>Create an initial app with display name and contact email. Choose a category that suits best. Click on
+    Create App ID and confirm the security code.
+    </li>
+</ul>
+
+<p><img alt="Screenshot" src="../img/OAuth-Facebook-create.png" /></p>
+<ul>
+    <li>Now click on Get Started next to FaceBook login (first in the list).</li>
+    <li>
+        On the settings page we enter the <strong>Valid OAuth redirect URIs:</strong>
+        use your domain (plus subfolders if any) with <code>auth/oauth2/verify/Facebook</code>
+    </li>
+</ul>
+
+<p><img alt="Screenshot" src="../img/OAuth-Facebook-client-config.png" /></p>
+<ul>
+    <li>
+        In the menu go to <strong>Settings - Basic</strong>. Here we will find the app ID and secret which we need to use
+        to create a new provider in our adminpanel.
+    </li>
+    <li>
+        Click on Show and copy the secret, then go to adminpanel - OAuth Providers and add a new social login option
+        as explained above.
+    </li>
+    <li>
+        We continue with the App Domains: to be sure just put in both domains with and without www.
+    </li>
+    <li>
+        Click on Add Platform and choose Website - I add just the root domain here and it seems to work fine.
+    </li>
+</ul>
+
+<p><img alt="Screenshot" src="../img/OAuth-Facebook-settings-basic.png" /></p>
+<p>To <strong>make your app available</strong> go to App Review in the menu and set it to live here.</p>
+<h3 id="google">Google</h3>
+<p>You can also find an alternative explanation <a href="https://developers.google.com/identity/sign-in/web/devconsole-project">on the google website</a>.</p>
+<ul>
+    <li>Go to <a href="https://console.developers.google.com">Google Developer Console</a></li>
+    <li>Click the dropdown and select Create a new project. Choose a name for the project.</li>
+    <li>Click on Credentials in the menu en choose "Create Credentials" then select Oauth Client ID from the dropdown.<br>
+    The following screen appears: </li>
+</ul>
+
+<p><img alt="Screenshot" src="../img/OAuth-Google-credentials.png" /><br><br>
+<img alt="Screenshot" src="../img/OAuth-Google-credentials-start.png" /></p>
+<ul>
+    <li>Choose a required name;</li>
+    <li>Add the correct return url with yourdomain and then <code>auth/oauth2/verify/Google</code> as path.</li>
+    <li>You will be asked to fill out the Consent screen:</li>
+</ul>
+
+<p><img alt="Screenshot" src="../img/OAuth-Google-consent.png" /></p>
+<ul>
+    <li>When finished a popup will appear with the credential data. You can also consult this data by 
+    clicking on Credentials in the left menu and then selecting your project.</li>
+</ul>
+
+<p><img alt="Screenshot" src="../img/OAuth-Google-credentials-done.png" /></p>
+<h3 id="twitter">Twitter</h3>
+<ul>
+    <li>Go to <a href="https://apps.twitter.com/">Application Management</a> and click on Create New App.</li>
+    <li>Fill out the details:</li>
+</ul>
+
+<p><img alt="Screenshot" src="../img/OAuth-Twitter-start.png" /></p>
+<ul>
+    <li>We arrive at the Details page where there's some data available from this app.</li>
+    <li>Consumer Key (API Key) and Consumer Secret (API Secret) can be grabbed from the Keys and Access Tokens page.</li>
+</ul>
+
+<h6>REQUIRED: Adding permissions to grab the email address</h6>
+
+<p>To enable the email address in the callback data we need to go to Settings and enter a value for Privacy Policy URL and
+Terms of Service URL.</p>
+<h6>RECOMMENDED: Allow application</h6>
+
+<p>To make sure we do not have to re-authenticate with Twitter every time we need to check the box that says
+"Allow this application to be used to Sign in with Twitter".</p>
+<p>Full example below:</p>
+<p><img alt="Screenshot" src="../img/OAuth-Twitter-settings.png" /></p>
+<h3 id="github">Github</h3>
+<ul>
+    <li>Go to <a href="https://github.com/settings/profile">Your Github Profile</a>.</li>
+    <li>Enable your email address.</li>
+    <li>Click on OAuth applications in the left column down below.</li>
+    <li>Register a new application.</li>
+    <li>Fill out the details like always.</li>
+    <li>Once finished you will immediately see the tokens to add to the adminpanel provider section.</li>
+</ul>
+
+<p><img alt="Screenshot" src="../img/OAuth-Github-start.png" /></p>
+<h3 id="linkedin">LinkedIn</h3>
+<ul>
+    <li>Go to <a href="https://www.linkedin.com/developer/apps">LinkedIn developer console</a>.</li>
+    <li>Click Create Application. Linkedin requires some more information then others with a required
+    business email and phone number and also a logo.</li>
+    <li>Repeat the same steps from above but use the correct OAuth link: I think by now we get it but here it
+    is anyway: <code>https://example.com/auth/oauth2/verify/LinkedIn</code>.</li>
+    <li>Your keys can be found on the Authentication page. Check the <strong>r_emailaddress</strong> box there now.</li>
+    <li>Set the app to live in Settings.</li>
+</ul>
+
+<p><img alt="Screenshot" src="../img/OAuth-LinkedIn-auth.png" />
+<br><br>
+<img alt="Screenshot" src="../img/OAuth-LinkedIn-settings-top.png" /></p>
+<h3 id="microsoft">Microsoft</h3>
+<ul>
+    <li>Go to <a href="https://apps.dev.microsoft.com/#/appList">Your applications</a>.</li>
+    <li>Click on Add An App, choose a name for your project.</li>
+    <li>You are immediately presented with your Application Id:</li>
+</ul>
+
+<p><img alt="Screenshot" src="../img/OAuth-Microsoft-properties.png" /></p>
+<ul>
+    <li>Generate a new password for this Application ID and copy it into CIMembership.</li>
+    <li>Click on Add Platform and add the correct redirect URL as shown above.</li>
+    <li>You are immediately presented with your Application Id.</li>
+</ul>
+
+<h3 id="paypal">Paypal</h3>
+<ul>
+    <li>Go to <a href="https://developer.paypal.com/">Paypal Developer and log in</a>.</li>
+    <li>Paypal has an excellent manual where we can easily get lost because it's so vast. It's nice to have but
+    it's also a bit annoying. We want the "Log In With PayPal" option and it can be found after clicking 
+    Dashboard at the top right of the screen. There could be regional differences.</li>
+    <li>We need to create new REST API credentials so click on that and choose an app name.</li>
+    <li>Now you will get client secret and id - grab them now and add a new provider via adminpanel.</li>
+</ul>
+
+<p><img alt="Screenshot" src="../img/OAuth-PayPal-secrets.png" /></p>
+<ul>
+    <li>You can toggle between live and sandbox and the keys will be different. I use live for the demo and sandbox for my dev box.</li>
+    <li>You can manage both sandbox and live in one account so that is a big plus. Thanks, Paypal. If you are going
+    live turn off the sandbox setting in the library. (application/libraries/Oauth1 or OAuth2). It is off by default though.</li>
+</ul>
+
+<h2 id="stripe">Stripe</h2>
+<ul>
+    <li>Is a little different - their member control panel is complex.</li>
+    <li>Go to <a href="https://dashboard.stripe.com/">The dashboard</a> - if you are asked to initialize a few
+    things just go ahead.</li>
+    <li>Click on your name at the right top and choose Account Settings:</li>
+</ul>
+
+<p><img alt="Screenshot" src="../img/OAuth-Stripe-settings.png" /></p>
+<ul>
+    <li>Go to API Key to know your app secret for both test and live.</li>
+    <li>Stripe also offers us the possibility to manage both test and live environments in one application.</li>
+    <li>Go to Connect - Platform Settings and do the necessary as always. You will find your client_id here.</li>
+</ul>
+
+<p><img alt="Screenshot" src="../img/OAuth-Stripe-connect.png" /></p>
+<h2 id="development-vs-production">Development vs Production</h2>
+<p>You are probably going to set all this up two times when you need a permanent development environment like I do.
+You can try to add multiple URLs and it will work for some providers but I prefer to keep them separate because the development
+environment needs to remain private. With Facebook you can disable live access to your apps but not all providers
+have this option.</p>
+<h2 id="other">Other</h2>
+<p>More providers will be added in the next version: VK, Microsoft, Steam, etc. will be tested thoroughly before
+making it public.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../roles_permissions/" class="btn btn-neutral float-right" title="Roles and Permissions">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../core_modules/" class="btn btn-neutral" title="Core Modules"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>CIMembership is licenced through codecanyon.net and Envato: all their copyrights apply &copy; 2017.</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../core_modules/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../roles_permissions/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Coding tips - CIMembership Official Documentation</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../css/extra.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Coding tips";
+    var mkdocs_page_input_path = "coding_tips.md";
+    var mkdocs_page_url = "/coding_tips/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> CIMembership Official Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            
+          
+            
+              <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../overview/">Overview</a>
+        
+    </li>
+<li>
+            
+          
+            
+              <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../config/">Configuration Files</a>
+        
+    </li>
+<li>
+            
+          
+            
+              <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../installation/">Installation</a>
+        
+    </li>
+<li>
+            
+          
+            
+              <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../core_modules/">Core Modules</a>
+        
+    </li>
+<li>
+            
+          
+            
+              <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../social_login/">Configuring Social Login</a>
+        
+    </li>
+<li>
+            
+          
+            
+              <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../roles_permissions/">Roles and Permissions</a>
+        
+    </li>
+<li>
+            
+          
+            
+              <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Coding tips</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#i-want-to-editchange-this-controller-view-model-etc">I want to edit/change this controller, view, model, etc</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#managing-persistent-session-data">Managing persistent session data</a></li>
+                
+                    <li><a class="toctree-l4" href="#login-model">Login model</a></li>
+                
+                    <li><a class="toctree-l4" href="#session-helper">Session helper</a></li>
+                
+                    <li><a class="toctree-l4" href="#social-registration">Social registration</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#database">Database</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#custom-libraries-and-vendor-code">Custom libraries and vendor code</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#creating-modules">Creating modules</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+            
+          
+            
+              <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../theming_layouts/">Theming and layouts</a>
+        
+    </li>
+<li>
+            
+          
+        </ul>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">CIMembership Official Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Coding tips</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1>Coding tips</h1>
+
+<p>(this section will be expanded with more ideas)</p>
+<h2 id="i-want-to-editchange-this-controller-view-model-etc">I want to edit/change this controller, view, model, etc</h2>
+<p>When we want to expand the default code we need to hold into account that future updates might mess up our changes.
+The general rule is to copy the code you want to modify and circumvent default references and routes to this copy.</p>
+<p>The best way to proceed is to copy the module and create routes to this new module from the default locations.</p>
+<p><strong>Example:</strong><br>
+Suppose I want to override the registration form. We can work with clumsy core controllers or we can just work from a copy. This way 
+we won't miss out on future updates in the default module.<br>
+- we copy the whole folder <code>application/modules/auth</code> to <code>application/modules/auth_copy</code>
+<br>
+- set some routes to our copy with <code>$route['register'] = 'auth_copy/register'</code>, optionally create a separate config file for custom routes,
+those will override default routes and won't mess with future updates.
+<br></p>
+<h2 id="managing-persistent-session-data">Managing persistent session data</h2>
+<p><strong>When you need to keep track of changing data that needs to be persistent over a long period of time session data is used.</strong>
+<br>
+For example the username is stored as persistent data because it is used on many different places on the website and is also used
+to check things behind the scenes.</p>
+<p>Config.php has some settings for sessions, look for the section "Session Variables"</p>
+<p><strong>These session variables are available to you at login:</strong><br>
+- <strong>user_id</strong>: the id of the member who is currently logged in. Can be used to update user-specific data for example;
+<br>
+- <strong>username</strong>: as we need to display this often enough we added it to the session;
+<br>
+- <strong>profile_img</strong>: the file name of the profile image.</p>
+<h3 id="login-model">Login model</h3>
+<p>It is advised to expand the user table and add new fields used for session data there. You can also add an extra table
+and work with a join if you don't want to tamper with the default CIMembership tables.
+<br>
+The <strong>login model</strong> <code>application/modules/auth/models/Login_model.php</code> contains the main query to extract data from the user and therefore this is the query
+where new session data should be added. </p>
+<p>Since CIMembership version 3.2.1 the <code>validate_login()</code> method is called by all login mechanisms, be it regular or OAuth.</p>
+<p>So first we edit the query inside this method, adding the newly created database table fields into our select statement.<br></p>
+<h3 id="session-helper">Session helper</h3>
+<p>The session_helper function <code>session_init()</code> does the actual session data creation and is fed data from the login model.
+When you fields in the user table the login model will pass these on to the validation system which calls <code>set_session_data()</code>. This function
+will set session data one by one with a hard-coded array: <strong>this array needs to be modified if you want to add persistent session data</strong>. </p>
+<p>We also have <code>create_member_oauth()</code> for our social registration which is explained below.</p>
+<h3 id="social-registration">Social registration</h3>
+<p><strong>During registration via OAuth (social login) we must immediately add some session data because after registering the user immediately has access
+to the system.</strong> This is not the case for normal registration as we only create an account here and the login does not occur yet.
+<br>
+The file <code>application/modules/auth/models/Oauth_model.php</code> contains a method called <code>create_member_oauth()</code> that takes care of
+creating a new account when using social networks.<br>
+If we want extra data to be returned from this method
+for session data we need to add an extra query to grab this data after doing the actual registration. There is a commented example available inside this method.</p>
+<p>[todo: add working example]</p>
+<h2 id="database">Database</h2>
+<p>We use the DB_PREFIX constant to take care of the prefix chosen during setup (can be empty). If you want to maintain this way of working please
+add this to all your database queries - for examples just look at some model files from existing modules.</p>
+<p>[todo: add more info on ...? TBD]</p>
+<h2 id="custom-libraries-and-vendor-code">Custom libraries and vendor code</h2>
+<p>There's an extension on the default form validation called MY_Form_validation and can be found in <code>application/libraries</code>.</p>
+<p>We also make use of a caching lib, a customized template library, have our own image uploading library and use a separate recaptcha one, too. 
+For OAuth we created some small libraries in combination with the PHPLeague vendor files: these libraries make our lives easier by
+handling all the exchanges between this third-party script. Each OAuth library does some provider-specific work when required.</p>
+<p>You can definitely add custom libraries the usual CodeIgniter way but sometimes we need to do something different. The vendor package for
+OAuth is a perfect example as it is compiled with composer outside of the project and we need to use a require to tap into the script
+directly.<br>
+On the one hand we use a library <code>$this-&gt;load-&gt;library('OAuth2/'. $provider);</code> to deal with the loading of provider-specific data,
+then we connect to the script itself for doing the verification by requiring <code>require APPPATH . 'vendor/PHPLeague-OAuth2/autoload.php';</code>.
+<br>We used libraries here to deal
+with dynamic stuff: we load the corresponding library for the the provider based on the provider name requested, we use an abstract class <code>abstract class OAuth2_Abstract</code> to act as a
+sort of template to do the same type of request for different providers. All our provider libraries extend this abstract class and 
+override the <code>setProvider()</code> method.
+<br><br>
+So you see you can include any code you want and don't have to turn everything into a CodeIgniter library.</p>
+<h2 id="creating-modules">Creating modules</h2>
+<p>First of all read the rather limited docs from <a href="https://bitbucket.org/wiredesignz/codeigniter-modular-extensions-hmvc">Wiredesignz HMVC</a>.</p>
+<p>The best advice I can give you is: have a look at how the current modules are built up. The home module is very easy and can be used
+as a starting point for other modules. Just code like you are used to with CodeIgniter but with added flexibility of HMVC.</p>
+<p>There's not really a good in-depth tutorial unfortunately.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../theming_layouts/" class="btn btn-neutral float-right" title="Theming and layouts">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../roles_permissions/" class="btn btn-neutral" title="Roles and Permissions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>CIMembership is licenced through codecanyon.net and Envato: all their copyrights apply &copy; 2017.</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../roles_permissions/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../theming_layouts/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

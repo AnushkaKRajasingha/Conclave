@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Core Modules - CIMembership Official Documentation</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link href="../css/extra.css" rel="stylesheet">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Core Modules";
+    var mkdocs_page_input_path = "core_modules.md";
+    var mkdocs_page_url = "/core_modules/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> CIMembership Official Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            
+          
+            
+              <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../overview/">Overview</a>
+        
+    </li>
+<li>
+            
+          
+            
+              <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../config/">Configuration Files</a>
+        
+    </li>
+<li>
+            
+          
+            
+              <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../installation/">Installation</a>
+        
+    </li>
+<li>
+            
+          
+            
+              <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Core Modules</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#adminpanel">adminpanel</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#auth">auth</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#home">home</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#membership">membership</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#utils">utils</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#page_layouts">page_layouts</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+            
+          
+            
+              <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../social_login/">Configuring Social Login</a>
+        
+    </li>
+<li>
+            
+          
+            
+              <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../roles_permissions/">Roles and Permissions</a>
+        
+    </li>
+<li>
+            
+          
+            
+              <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../coding_tips/">Coding tips</a>
+        
+    </li>
+<li>
+            
+          
+            
+              <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../theming_layouts/">Theming and layouts</a>
+        
+    </li>
+<li>
+            
+          
+        </ul>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">CIMembership Official Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Core Modules</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1>Core Modules</h1>
+
+<p>This application uses <a href="https://bitbucket.org/wiredesignz/codeigniter-modular-extensions-hmvc">HMVC from Wiredesignz</a> for a
+more modular approach to our coding needs. This means that all our code resides inside <code>application/modules</code> and some sort of separation becomes
+possible. Adding new functionality means adding a new module with the same folder structure.<br>
+Unfortunately we still can't include our assets (images, css, js) in these module folders because this would mean an insecurity so
+if you want to separate your assets you can create separate folders in <code>assets</code>. For this application however I opted for a vendor folder instead:
+assets are probably shared between modules at some point and keeping them in their vendor-specific folder allows for easy referencing.
+You can still use the regular MVC design pattern CodeIgniter uses, it's just that HMVC has many advantages over regular MVC in CodeIgniter that
+it is highly advised to use it.</p>
+<h2 id="adminpanel">adminpanel</h2>
+<p>The backend module. All core management functionality has been collected into this module:
+- site settings
+- admin dashboard
+- member management
+- OAuth provider setup
+- roles and permissions</p>
+<h2 id="auth">auth</h2>
+<p>Takes care of all authentication aspects of the application be it social or regular login and registration.</p>
+<ul>
+<li>login</li>
+<li>registration</li>
+<li>social login and signup</li>
+<li>authentication recovery in case of lost data</li>
+</ul>
+<h2 id="home">home</h2>
+<p>The default public page needs a controller just like any other page. The home controller has been designated as default controller for all
+modules. There are no models involved in this module, just a simple controller. This can easily be used as a base to start from.</p>
+<h2 id="membership">membership</h2>
+<p>For all the pages that are related to the member and their data. Currently we have:</p>
+<ul>
+<li>dashboard</li>
+<li>profile</li>
+</ul>
+<p>In the future a public profile page will also be added and this is just one example of what you can expect in new releases.</p>
+<h2 id="utils">utils</h2>
+<p>Contains various code that doesn't really need it's own module.</p>
+<p>controllers:</p>
+<ul>
+<li>install</li>
+<li>page not found</li>
+<li>site offline</li>
+</ul>
+<p>modules:</p>
+<ul>
+<li>RBAC for access control (see <a href="../roles_permissions">roles and permissions</a>)</li>
+<li>set cookies model (loads data when unique_token cookie is found for remembering logins)</li>
+<li>settings (autoloaded, writes config to file)</li>
+</ul>
+<h2 id="page_layouts">page_layouts</h2>
+<p>Just a generic folder containing the different controllers for our set of adminpanel layouts. We have six controllers, one for each layout option.
+Can be removed as they are not actively used anywhere, these are just examples for how to quickly set up a differing layout.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../social_login/" class="btn btn-neutral float-right" title="Configuring Social Login">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../installation/" class="btn btn-neutral" title="Installation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>CIMembership is licenced through codecanyon.net and Envato: all their copyrights apply &copy; 2017.</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../installation/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../social_login/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

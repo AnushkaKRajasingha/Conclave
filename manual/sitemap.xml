@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    
+    <url>
+     <loc>None/</loc>
+     <lastmod>2017-03-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/overview/</loc>
+     <lastmod>2017-03-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/config/</loc>
+     <lastmod>2017-03-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/installation/</loc>
+     <lastmod>2017-03-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/core_modules/</loc>
+     <lastmod>2017-03-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/social_login/</loc>
+     <lastmod>2017-03-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/roles_permissions/</loc>
+     <lastmod>2017-03-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/coding_tips/</loc>
+     <lastmod>2017-03-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>None/theming_layouts/</loc>
+     <lastmod>2017-03-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+</urlset>

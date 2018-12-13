@@ -1,0 +1,215 @@
+@CHARSET "ISO-8859-1";
+::-webkit-input-placeholder { /* Chrome, Safari */
+   color: #aaa !important;
+   font-size: 18px;
+}
+
+:-moz-placeholder {           /* Firefox 18- */
+   color: #aaa  !important;
+   font-size: 18px;
+}
+
+::-moz-placeholder {          /* Firefox 19+ */
+  color: #aaa  !important;
+  font-size: 18px;
+}
+
+:-ms-input-placeholder {      /* Internet Explorer */
+  color: #aaa  !important;
+  font-size: 18px;
+}
+body{
+	    background-size: cover !important;
+    background-image: url('../../img/Pedrick4.jpg')  !important;
+}
+.navbar-brand-logo{display:none !important;}
+.navbar-brand-title-small {
+    font-weight: bold;
+    color: #fff;
+    font-size:.8em
+}
+
+/* data table */
+.table-responsive{
+	overflow-x:inherit; 
+}
+.table-responsive ul, .table-responsive menu,.table-responsive dir {
+    list-style: none;
+}
+td span.tools.pull-right .fa {
+    margin-right: 5px;
+}
+.label-inverse{
+	color: #000;
+	background-color: #ccc;
+}
+
+/* Share center */ 
+ul.list-posts {
+    max-height: 30vh;
+    list-style: none;
+    overflow:scroll;
+    overflow-x:hidden;
+    padding-left: 20px;
+}
+ul.list-posts li.post-item:nth-child(odd){  
+    background-color: #ffedaf;
+}
+ul.list-posts li.post-item{
+    padding:0.2em .5em;
+    border-bottom:1px #ccc solid;
+    overflow: hidden;    
+}
+
+ul.list-posts li.post-item img {
+    margin-right: 5px;
+    width: 50px;
+    float: left;
+    max-height: 50px;
+    margin-bottom: 5px;
+}
+
+ul.list-posts li.post-item:hover{
+    background-color:#dd6964;
+    cursor:pointer;
+}
+ul.list-posts li.post-item p.post-content {
+    font-size:11px;
+    margin:0;
+    font-style: italic;
+}
+
+ul.list-posts li.post-item h4.post-title {
+    margin:0;
+   /* font-size:14px;*/
+    font-weight: bold;
+}
+#loading-img,#loading-img-con{
+	display: none;
+	opacity: 0.5;
+	position: absolute;
+	width: 100%;
+	background-image: url('../../img/loading.gif');
+	background-position: center;
+	background-size:cover;
+	height: 60vh;
+}
+
+.clear {
+    clear: both;
+}
+
+li.post-item hr {
+    margin-top: 2px;
+    margin-bottom: 2x;
+    border: 0;
+    border-top: 1px solid #bdbdbd;
+}
+
+/* post-data */
+h3#post-title {
+    margin-top:5px;
+    padding-bottom:5px;
+    margin-bottom:5px;
+    border-bottom:1px #ccc solid;
+}
+
+span#post-meta , .alsoshared {
+    font-size:12px; 
+    font-style:italic;
+}
+.alsoshared a{
+	color:#000;
+}
+
+p#post-content {
+    margin-top:5px;
+}
+
+/* con to share */
+img.item-con-img {
+    max-width: 100%;
+}
+
+.item-con {
+    text-align: center;
+}
+
+ul#con-check-list {
+    padding-left: 0;
+    list-style: none;
+}
+.item-con-meta input[type="checkbox"] {
+    width: 100%;
+}
+.item-con{
+	    border-radius: 10px;
+    padding: 0 3%;
+    border:1px solid #ccc;
+    background-color: #fca064;
+}
+
+.item-con:hover{
+	    background-color: #4267b2;
+    border: 1px solid #29487d;
+    color: #fff;
+}
+
+
+label.item-con-meta {
+    cursor: pointer;
+}
+
+.row.share-action-row {
+    z-index: 9999;
+    bottom: 50px;
+}
+
+.row.share-action-row  button.post_share_button.btn.btn-primary.btn-lg.pull-right {
+    margin-right: 1em;
+    display: none;
+}
+
+.h4-title{
+	border-bottom: 2px #ccc solid;padding-left:20px;padding-bottom:10px;
+}
+
+/* tag input */
+.bootstrap-tagsinput {
+    height: 46px;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    width: 100%;
+}
+.bootstrap-tagsinput {
+    padding: 10px !important;
+}
+h3.avail_points{
+	margin-top:10px;
+}
+span#avail_points{
+	margin-left:5px;
+}
+h4.avail_points {
+    margin-top: 15px;
+}
+/* typeahead */
+.navbar-form .tt-menu {
+    width: 100%;
+    background-color: #dd6964;
+}
+.navbar-form .tt-menu a{   
+        color: #fff;
+}
+.navbar-form .tt-suggestion { padding:0.5em 1em;border-bottom:1px solid rgba(255, 255, 255, 0.2);}
+
+/* post page */
+#connect-search .tt-menu {
+    width: 100%;
+    background-color: #dd6964;
+}
+#connect-search .tt-menu span.name{   
+        color: #fff !important;
+}
+#connect-search .tt-suggestion { padding:0.5em 1em;border-bottom:1px solid rgba(255, 255, 255, 0.2);}
